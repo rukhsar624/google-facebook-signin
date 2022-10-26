@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './compoment/login/login.component';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
-import {GoogleLoginProvider,} from '@abacritt/angularx-social-login';
+import {GoogleLoginProvider,FacebookLoginProvider} from '@abacritt/angularx-social-login';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,12 @@ import {GoogleLoginProvider,} from '@abacritt/angularx-social-login';
               '842190869240-d5be5697sst8psahcaoai2m2u92istdd.apps.googleusercontent.com'
             )
           },
+          {
+            id:FacebookLoginProvider.PROVIDER_ID,
+            provider:new FacebookLoginProvider(
+              '1678680989199604'
+            )
+          }
 
         ],
         onError: (err) => {

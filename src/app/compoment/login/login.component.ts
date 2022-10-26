@@ -1,6 +1,6 @@
  import { SocialUser } from '@abacritt/angularx-social-login';
  import { Component, OnInit } from '@angular/core';
- import { SocialAuthService,GoogleLoginProvider } from "@abacritt/angularx-social-login";
+ import { SocialAuthService,GoogleLoginProvider,FacebookLoginProvider } from "@abacritt/angularx-social-login";
  @Component({
    selector: 'app-login',
    templateUrl: './login.component.html',
@@ -27,6 +27,13 @@
  }
  signOut():any{
    this.authService.signOut();
+ }
+ facebookLogin():void{
+  this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(data=>{
+    console.log(data , "fb");
+
+   })
+
  }
  }
 

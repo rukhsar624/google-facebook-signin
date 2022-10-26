@@ -1,0 +1,18 @@
+h1,h3{
+  text-transform: capitalize;
+}
+button{
+  text-transform: capitalize;
+}
+.google{
+  background-color: #dd4b39;
+}
+.facebook{
+  background-color: #3b5998;
+}
+.linkedin{
+  background-color:#007bb6 ;
+}
+a{
+  text-decoration: none;
+}

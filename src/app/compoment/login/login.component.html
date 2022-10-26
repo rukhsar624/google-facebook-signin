@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 mx-auto mt-5">
+      <div class="card" style="width: 60rem; height: 15rem;">
+        <div class="card-header text-center">
+         Angular Social login
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Social Login Demo</h5>
+          <p class="card-text text-center">Sign in with</p>
+          <div class="text-center">
+            <div class="btn-group">
+              <a href="javascript:void(0)" >
+                <asl-google-signin-button type='standard' size='medium'></asl-google-signin-button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="user" class="card text-center">
+    <h6 class="card-header">
+      login with Google in Angular
+    </h6>
+    <div class="card-block">
+      <img *ngIf="user.photoUrl" src="{{user.photoUrl}}" alt="" class="card-img-top img-responsive photo">
+      <div class="card-block">
+           <h4 class="card-title">
+            {{user.name}}
+           </h4>
+           <p class="card-text">
+            {{user.email}}
+           </p>
+           <p class="card-text">
+            logged in with :{{user.provider}}
+           </p>
+      </div>
+      <div class="card-block">
+        <button class="btn btn-danger" (click)="signOut()">
+              SignOut
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

@@ -29,8 +29,8 @@
    this.authService.signOut();
  }
  facebookLogin():void{
-  this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(data=>{
-    console.log(data , "fb");
+  this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(res=>{
+    console.log(res , "fb");
 
    })
 

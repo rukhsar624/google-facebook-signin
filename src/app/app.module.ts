@@ -5,7 +5,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './compoment/login/login.component';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import {GoogleLoginProvider,FacebookLoginProvider} from '@abacritt/angularx-social-login';
-
+import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
+const cookieConfig:NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'localhost' // or 'your.domain.com'
+}}
 @NgModule({
   declarations: [
     LoginComponent,
@@ -14,7 +18,8 @@ import {GoogleLoginProvider,FacebookLoginProvider} from '@abacritt/angularx-soci
   imports: [
     SocialLoginModule,
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
     {
